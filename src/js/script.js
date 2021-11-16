@@ -17,20 +17,13 @@ counters.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 });
 
-$('form').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "mailer/smart.php",
-        data: $(this).serialize()
-    }).done(function() {
-        $(this).find("input").val("");
-        // $('#consultation, #order').fadeOut();
-        // $('.overlay, #thanks').fadeIn('slow');
 
-        $('form').trigger('reset');
-    });
-    return false;
-});
-      
+
+$('.skills__item').each(function(i) {
+    $(this).hover(function(e) {
+        $('.skills__item__content').eq(i).toggleClass('skills__item__content_active');
+        $('.skills__item__descr').eq(i).toggleClass('skills__item__descr_active');
+    })
+})
+
 
