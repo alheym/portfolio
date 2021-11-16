@@ -19,24 +19,32 @@
         &__wrapper {
             display: flex;
             height: 100%;
-            width: calc(200% + 40px);
+            width: calc(210% + 40px);
         }
         &__content {
             height: 100%;
             width: 50%;
             transition: 1.2s all;
+            margin-right: 0px;
             transform: translateX(-100%);
             &_active {
                 transform: translateX(0%);
+                margin-right: 20px;
             }
         }
         &__descr {
             width: 50%;
-            height: 100%;
             margin-left: 20px;
             padding-right: 20px;
+            margin-bottom: 0;
             transition: 1.2s all;
             transform: translateX(0%);
+            &-text {
+                margin-top: 10px;
+                font-size: 14px;
+                width: 210px;
+                height: 126px;
+            }
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;

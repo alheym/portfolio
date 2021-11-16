@@ -21,6 +21,7 @@ counters.forEach((item, i) => {
 
 $('.skills__item').each(function(i) {
     $(this).hover(function(e) {
+        e.preventDefault();
         $('.skills__item__content').eq(i).toggleClass('skills__item__content_active');
         $('.skills__item__descr').eq(i).toggleClass('skills__item__descr_active');
     })
