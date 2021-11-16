@@ -22,12 +22,13 @@
     margin: 25px auto 0 auto;
 }
 
-
+@import 'blocks/bg';
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/buttons';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
+@import 'blocks/face';
 @import 'blocks/about';
 @import 'blocks/resume';
 @import 'blocks/skills';
