@@ -18,8 +18,8 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
     initAnimation();
     addListeners();
     function initHeader() {
-        largeHeader = document.getElementById('bg-canvas');	
-		canvas = document.getElementById('canvas');
+        largeHeader = document.getElementById('contacts-canvas');	
+		canvas = document.getElementById('co-canvas');
 
         width = canvas.offsetWidth;
         height = canvas.offsetHeight;
@@ -29,10 +29,10 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
         canvas.height = height;
         ctx = canvas.getContext('2d');
         points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
+        for(var x = 0; x < width; x = x + width/10) {
+            for(var y = 0; y < height; y = y + height/10) {
+                var px = x + Math.random()*width/10;
+                var py = y + Math.random()*height/10;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
 			}

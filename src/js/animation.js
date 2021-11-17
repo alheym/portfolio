@@ -13,13 +13,14 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 
 
 (function() {
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+    var width, height, largeHeader, canvas, ctx, points, target, animateHeader  = true;
     initHeader();
     initAnimation();
     addListeners();
     function initHeader() {
         largeHeader = document.getElementById('bg-canvas');	
 		canvas = document.getElementById('canvas');
+
         width = canvas.offsetWidth;
         height = canvas.offsetHeight;
         target = {x: width/2, y: height/2};

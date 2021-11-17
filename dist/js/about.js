@@ -18,8 +18,8 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
     initAnimation();
     addListeners();
     function initHeader() {
-        largeHeader = document.getElementById('bg-canvas');	
-		canvas = document.getElementById('canvas');
+        largeHeader = document.getElementById('about-canvas');	
+		canvas = document.getElementById('ab-canvas');
 
         width = canvas.offsetWidth;
         height = canvas.offsetHeight;
