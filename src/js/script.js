@@ -23,8 +23,6 @@ counters.forEach((item, i) => {;
     lines[i].style.width = item.innerHTML;
 });
 
-
-
 $('.skills__item').each(function(i) {
     $(this).hover(function(e) {
         e.preventDefault();
@@ -32,5 +30,21 @@ $('.skills__item').each(function(i) {
         $('.skills__item__descr').eq(i).toggleClass('skills__item__descr_active');
     })
 })
+
+$('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+
+
+        $('form').trigger('reset');
+    });
+    return false;
+});
+
 
 
