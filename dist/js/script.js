@@ -1,5 +1,6 @@
 const hamburger = document.querySelector('.hamburger'),
       menu = document.querySelector('.menu'),
+      list = document.querySelector('.menu__overlay');
       close = document.querySelector('.menu__close');
 
       hamburger.addEventListener('click', () => {
@@ -9,6 +10,12 @@ const hamburger = document.querySelector('.hamburger'),
       close.addEventListener('click', () => {
           menu.classList.remove('active');
       });
+
+      document.addEventListener('click', (e) => {
+          if (e.target === list && menu.classList.contains('active')) {
+              menu.classList.remove('active');
+          }
+      })
 
       document.addEventListener('keydown', (e) => {
         if (e.code === 'Escape' && menu.classList.contains('active')) {
